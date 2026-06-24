@@ -1,0 +1,236 @@
+// CJS App Labs public demo/download site config.
+// Edit demoUrl, checkoutUrl and screenshots here without touching the page code.
+
+window.CJS_CONTACT = {
+  general: "info@cjsapplabs.xyz",
+  business: "admin@cjsapplabs.xyz",
+  owner: "cj@cjsapplabs.xyz"
+};
+
+window.CJS_PLANS = [
+  {
+    id: "free-demos",
+    name: "Free demos",
+    price: "$0",
+    note: "Try demo versions before paying.",
+    features: ["Open public demos", "No card needed", "Limited or demo-only saved data", "Good way to test if the app suits you"],
+    cta: "Browse demos",
+    href: "#/apps"
+  },
+  {
+    id: "single-app",
+    name: "Single app access",
+    price: "From $4.99/month",
+    note: "For people who only want one full app.",
+    features: ["One full app unlocked", "Use through the website", "Install from Chrome where supported", "Cancel anytime"],
+    cta: "Choose an app",
+    href: "#/apps"
+  },
+  {
+    id: "all-apps",
+    name: "All Apps bundle",
+    price: "$19.99/month",
+    note: "Best value when you use several CJS apps.",
+    features: ["All current supported apps", "New supported apps added over time", "One account", "Cancel anytime"],
+    cta: "Request bundle access",
+    href: "mailto:info@cjsapplabs.xyz?subject=All%20Apps%20Bundle%20subscription"
+  }
+];
+
+window.CJS_APPS = [
+  {
+    id: "inout",
+    name: "IN & OUT",
+    subtitle: "Invoicing, quoting, jobs and small business admin.",
+    category: "Business",
+    status: "Demo ready",
+    monthlyPrice: "$14.99/month",
+    demoUrl: "https://inout.pub.cjsapplabs.xyz/",
+    checkoutUrl: "",
+    iconText: "IO",
+    tags: ["Invoices", "Quotes", "Clients", "Tradies"],
+    shortDescription: "A practical app for sole traders and small operators who need quotes, invoices, jobs and client records in one place.",
+    longDescription: "IN & OUT started as a personal tool to make quote and invoice work less painful. It is designed for trade and maintenance work where you need to keep track of clients, job notes, materials, quotes, invoices and business records without living inside a complicated accounting package. The demo shows the general workflow. Full access is intended to add persistent user data, account-based storage and subscription access.",
+    screenshots: ["assets/screenshots/inout-1.svg", "assets/screenshots/inout-2.svg"]
+  },
+  {
+    id: "gamertabs",
+    name: "GamerTabs",
+    subtitle: "A growing collection of casual games and game tools.",
+    category: "Games",
+    status: "Demo ready",
+    monthlyPrice: "$4.99/month",
+    demoUrl: "https://gamertabs.cjsapplabs.xyz/",
+    checkoutUrl: "",
+    iconText: "GT",
+    tags: ["Board games", "Casino modes", "Multiplayer", "Fun"],
+    shortDescription: "A casual game hub with multiple game ideas under one roof.",
+    longDescription: "GamerTabs is a playful app hub for board-game inspired modes, casino-style experiments and same-device or online play ideas. It is built as a place to keep expanding games over time instead of creating a separate site for every single game. The demo is there so people can try the style and see which modes are available before any paid full access is offered.",
+    screenshots: ["assets/screenshots/gamertabs-1.svg", "assets/screenshots/gamertabs-2.svg"]
+  },
+  {
+    id: "sanctuary",
+    name: "Sanctuary",
+    subtitle: "A calm AI support space for reflection and check-ins.",
+    category: "Wellbeing",
+    status: "Demo ready",
+    monthlyPrice: "$7.99/month",
+    demoUrl: "https://sanctuary.cjsapplabs.xyz/",
+    checkoutUrl: "",
+    iconText: "SA",
+    tags: ["Journaling", "Check-ins", "Routines", "AI support"],
+    shortDescription: "A private-feeling digital space for journaling, self-reflection and daily support tools.",
+    longDescription: "Sanctuary is designed as a safe, quiet digital place for daily check-ins, journaling prompts, reflection tools and supportive AI-assisted conversation. It is not a replacement for a doctor, counsellor or crisis service, but it can help people organise thoughts, track patterns and build routines between real-world supports. The demo lets people experience the general feel before deciding whether full access is useful for them.",
+    screenshots: ["assets/screenshots/sanctuary-1.svg", "assets/screenshots/sanctuary-2.svg"]
+  },
+  {
+    id: "family-planner",
+    name: "Family Routine Planner",
+    subtitle: "Routines, rewards and structure for families.",
+    category: "Family",
+    status: "Demo ready",
+    monthlyPrice: "$5.99/month",
+    demoUrl: "https://familyapp.cjsapplabs.xyz/",
+    checkoutUrl: "",
+    iconText: "FP",
+    tags: ["Routines", "Rewards", "Kids", "Parents"],
+    shortDescription: "A family-focused app for routines, jobs, rewards and daily structure.",
+    longDescription: "Family Routine Planner was built around real family routines: getting tasks done, tracking rewards, keeping mornings and evenings calmer and making progress visible for kids. The goal is to make routine tracking feel encouraging rather than strict. Demo access lets families test the layout and the reward idea before moving to a full account-based version.",
+    screenshots: ["assets/screenshots/family-planner-1.svg", "assets/screenshots/family-planner-2.svg"]
+  },
+  {
+    id: "family-journal",
+    name: "Family Journal",
+    subtitle: "A warm private place for family memories and notes.",
+    category: "Family",
+    status: "Add demo URL",
+    monthlyPrice: "$5.99/month",
+    demoUrl: "",
+    checkoutUrl: "",
+    iconText: "FJ",
+    tags: ["Journal", "Memories", "Photos", "Private"],
+    shortDescription: "A family memory app for notes, milestones, entries and shared moments.",
+    longDescription: "Family Journal is intended for recording memories, milestones, family notes and personal stories in a simple digital journal. It can be used as a private family record, a shared memory space or a place to keep moments that would otherwise disappear into message threads and camera rolls. Full access will depend on account-based storage so each family keeps their own entries separate.",
+    screenshots: ["assets/screenshots/family-journal-1.svg", "assets/screenshots/family-journal-2.svg"]
+  },
+  {
+    id: "learning-stars",
+    name: "Learning Stars",
+    subtitle: "Bright interactive learning for kids.",
+    category: "Kids learning",
+    status: "Add demo URL",
+    monthlyPrice: "$4.99/month",
+    demoUrl: "",
+    checkoutUrl: "",
+    iconText: "LS",
+    tags: ["Kids", "Learning", "Games", "Rewards"],
+    shortDescription: "A colourful learning game designed to make practice feel positive and rewarding.",
+    longDescription: "Learning Stars is built for younger learners who respond better to games, colour and reward than plain worksheets. The idea is to turn practice into small wins, with friendly screens and activities that help kids stay engaged. Demo access will let parents and kids try the feel of the app before subscribing to the full version.",
+    screenshots: ["assets/screenshots/learning-stars-1.svg", "assets/screenshots/learning-stars-2.svg"]
+  },
+  {
+    id: "mathquest",
+    name: "Math Quest",
+    subtitle: "Maths practice built like an adventure.",
+    category: "Kids learning",
+    status: "Demo ready",
+    monthlyPrice: "$4.99/month",
+    demoUrl: "https://mathquest.cjsapplabs.xyz/",
+    checkoutUrl: "",
+    iconText: "MQ",
+    tags: ["Maths", "Adventure", "Kids", "Practice"],
+    shortDescription: "A quest-style maths app for practice, progress and confidence.",
+    longDescription: "Math Quest turns maths practice into a small adventure so it feels less like homework and more like progress through a game. It is designed for quick sessions, repeat practice and confidence-building. The demo version is free to try so kids and parents can see whether the style suits them before subscribing to full access.",
+    screenshots: ["assets/screenshots/mathquest-1.svg", "assets/screenshots/mathquest-2.svg"]
+  },
+  {
+    id: "electrolab",
+    name: "El3troLab",
+    subtitle: "Electrical calculators and practical trade helpers.",
+    category: "Trade tools",
+    status: "Demo ready",
+    monthlyPrice: "$9.99/month",
+    demoUrl: "https://electrolab.cjsapplabs.xyz/",
+    checkoutUrl: "",
+    iconText: "EL",
+    tags: ["Electrical", "Calculators", "Tools", "Reference"],
+    shortDescription: "A handy reference and calculator app for electrical and low-voltage work.",
+    longDescription: "El3troLab is aimed at practical electrical, data, low-voltage and trade work. It is a place for calculators, wiring references, voltage drop checks, quick formulas and other job-site helpers. The demo shows the direction of the tool, while full versions can expand into saved jobs, favourites and deeper calculators.",
+    screenshots: ["assets/screenshots/electrolab-1.svg", "assets/screenshots/electrolab-2.svg"]
+  },
+  {
+    id: "grimoire",
+    name: "Grimoire Obscura",
+    subtitle: "A dark reference app for occult and mythology topics.",
+    category: "Reference",
+    status: "Demo ready",
+    monthlyPrice: "$4.99/month",
+    demoUrl: "https://grimoire.cjsapplabs.xyz/",
+    checkoutUrl: "",
+    iconText: "GO",
+    tags: ["Reference", "Occult", "Mythology", "Dark UI"],
+    shortDescription: "A styled reference app for mythology, symbolism, occult themes and dark encyclopaedia browsing.",
+    longDescription: "Grimoire Obscura is built as a dark, atmospheric reference app for people who enjoy mythology, symbolism, folklore, esoteric subjects and themed encyclopaedia browsing. It is intended as a creative reference experience rather than a plain list of articles. The demo gives users a feel for the style and content structure.",
+    screenshots: ["assets/screenshots/grimoire-1.svg", "assets/screenshots/grimoire-2.svg"]
+  },
+  {
+    id: "mixmate",
+    name: "MixMate Cocktails",
+    subtitle: "Cocktail discovery, ingredients and inventory.",
+    category: "Lifestyle",
+    status: "Demo ready",
+    monthlyPrice: "$4.99/month",
+    demoUrl: "https://mixmate.cjsapplabs.xyz/",
+    checkoutUrl: "",
+    iconText: "MM",
+    tags: ["Cocktails", "Ingredients", "Inventory", "Shopping list"],
+    shortDescription: "A cocktail companion for recipes, ingredients, stock and shopping lists.",
+    longDescription: "MixMate Cocktails helps people explore drinks, manage ingredients, build shopping lists and find recipes based on what they have. It is made for home use, casual entertaining and people who like discovering new cocktails without constantly searching separate recipe sites. The demo lets users browse before full features are unlocked.",
+    screenshots: ["assets/screenshots/mixmate-1.svg", "assets/screenshots/mixmate-2.svg"]
+  },
+  {
+    id: "moneymate",
+    name: "MoneyMate Colour Budget",
+    subtitle: "A colourful personal budget and bills planner.",
+    category: "Finance",
+    status: "Add demo URL",
+    monthlyPrice: "$5.99/month",
+    demoUrl: "",
+    checkoutUrl: "",
+    iconText: "MB",
+    tags: ["Budget", "Bills", "Savings", "Calendar"],
+    shortDescription: "A simple, visual budgeting app for bills, spending, savings and reminders.",
+    longDescription: "MoneyMate Colour Budget is designed for people who want a more visual way to understand their money. It focuses on bills, income, savings goals, reminders and colour-coded planning instead of heavy financial jargon. Demo access is useful for testing whether the layout makes budgeting easier before full data storage is enabled.",
+    screenshots: ["assets/screenshots/moneymate-1.svg", "assets/screenshots/moneymate-2.svg"]
+  },
+  {
+    id: "coach-court",
+    name: "Coach Court",
+    subtitle: "Basketball coaching notes, drills and rotations.",
+    category: "Sport",
+    status: "Add demo URL",
+    monthlyPrice: "$5.99/month",
+    demoUrl: "",
+    checkoutUrl: "",
+    iconText: "CC",
+    tags: ["Basketball", "Coaching", "Drills", "Rotations"],
+    shortDescription: "A basketball coaching helper for training, notes and game-day organisation.",
+    longDescription: "Coach Court is designed for junior basketball coaching, with tools for drills, player notes, sub planning, game feedback and simple training structure. It is meant to help coaches stay organised without needing a complicated sports management platform. Demo access will show the core layout and coaching workflow.",
+    screenshots: ["assets/screenshots/coach-court-1.svg", "assets/screenshots/coach-court-2.svg"]
+  },
+  {
+    id: "after-dark",
+    name: "After Dark Stories",
+    subtitle: "Personalised generated stories for adult readers.",
+    category: "Creative writing",
+    status: "Add demo URL",
+    monthlyPrice: "$7.99/month",
+    demoUrl: "",
+    checkoutUrl: "",
+    iconText: "AD",
+    tags: ["Stories", "AI writing", "Save reads", "Personalised"],
+    shortDescription: "A creative story app that generates personalised stories based on user choices.",
+    longDescription: "After Dark Stories is a creative writing app that generates stories based on selected genre, tone, length and style. It is built for people who like personalised reading and want something different each time they open the app. Full access is intended to include saved stories, read-aloud style features and account-based history.",
+    screenshots: ["assets/screenshots/after-dark-1.svg", "assets/screenshots/after-dark-2.svg"]
+  }
+];

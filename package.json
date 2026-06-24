@@ -1,0 +1,9 @@
+{
+  "name": "cjsapplabs-public-showcase",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build.js",
+    "validate": "node scripts/validate.js"
+  }
+}
