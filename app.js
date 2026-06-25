@@ -109,9 +109,15 @@ function renderAppDetail(id) {
     ? `<a class="primary-button" href="${escapeAttr(app.demoUrl)}" target="_blank" rel="noreferrer">Open free demo</a>`
     : `<button class="primary-button disabled" disabled>Demo link pending</button>`;
   const subscribeHref = app.checkoutUrl || `mailto:${CONTACT.general}?subject=${encodeURIComponent(`${app.name} subscription access`)}`;
-  const screenshots = app.screenshots.map((src, index) => `
+  const screenshotList = Array.isArray(app.screenshots) && app.screenshots.length
+    ? app.screenshots
+    : [`assets/screenshots/${app.id}-1.svg`];
+  const screenshots = screenshotList.map((src, index) => `
     <figure class="screenshot-card">
-      <img src="${escapeAttr(src)}" alt="${escapeAttr(app.name)} screenshot ${index + 1}" />
+      <div class="screenshot-frame">
+        <img src="${escapeAttr(src)}" alt="${escapeAttr(app.name)} screenshot ${index + 1}" onerror="this.parentElement.classList.add('missing'); this.remove();" />
+        <span>Screenshot coming soon</span>
+      </div>
       <figcaption>${index === 0 ? "App overview" : "Feature preview"}</figcaption>
     </figure>
   `).join("");
