@@ -40,8 +40,8 @@ window.CJS_PLANS = [
   {
     "id": "all-apps",
     "name": "All Apps bundle",
-    "price": "$19.99/month",
-    "note": "Best value when you use several CJS apps.",
+    "price": "$29.99/month",
+    "note": "Best value when you use several of these apps.",
     "features": [
       "All current supported apps",
       "New supported apps added over time",
@@ -54,33 +54,60 @@ window.CJS_PLANS = [
 ];
 
 window.CJS_APPS = [
-  {
-    "id": "inout",
-    "name": "IN & OUT",
-    "subtitle": "Invoicing, quoting, jobs and small business admin.",
-    "category": "Business",
+{
+  "id": "the-accountant",
+  "name": "The Accountant",
+  "subtitle": "Invoicing, quoting, jobs and small business admin.",
+  "category": "Business",
+  "status": "Demo ready",
+  "monthlyPrice": "$14.99/month",
+  "demoUrl": "https://accountant.cjsapplabs.xyz",
+  "checkoutUrl": "https://buy.stripe.com/fZu6oG7an422gle5rednW02",
+  "iconText": "TA",
+  "tags": [
+    "Invoices",
+    "Quotes",
+    "Clients",
+    "Tradies"
+  ],
+  "shortDescription": "A practical app for sole traders and small operators who need quotes, invoices, jobs and client records in one place.",
+  "longDescription": "The Accountant started as a personal tool to make quote and invoice work less painful. When I started my handyman business I was so afriad to overcharge or undercharge on quotes. So I made this AI quoting system that gives me a better idea on what and how i should charge a client but also gives me a full scope and rundown of the job at hand including materials and tools needed. All of that with either just a quick photo or brief descrtiption it can tell you everything down to problems you may face.  It is designed for trade and maintenance work where you need to keep track of clients, job notes, materials, quotes, invoices and business records without living inside a complicated accounting package. It even has the ability to have multiple businesses separatley an at once with the choice of combined or indivdual finance and tax sections. The demo shows the general workflow. Full access is intended to add persistent user data, account-based storage and subscription access.",
+  "screenshots": [
+    "assets/screenshots/inout/screen-1.png",
+    "assets/screenshots/inout/screen-2.png",
+    "assets/screenshots/inout/screen-3.png",
+    "assets/screenshots/inout/screen-4.png",
+    "assets/screenshots/inout/screen-5.png"
+  ]
+},
+   {
+    "id": "sanctuary",
+    "name": "Sanctuary",
+    "subtitle": "A calm AI support space for reflection and check-ins.",
+    "category": "Wellbeing",
     "status": "Demo ready",
-    "monthlyPrice": "$14.99/month",
-    "demoUrl": "https://inout.pub.cjsapplabs.xyz/",
+    "monthlyPrice": "$7.99/month",
+    "demoUrl": "https://sanctuary.cjsapplabs.xyz/",
     "checkoutUrl": "",
-    "iconText": "IO",
+    "iconText": "SA",
     "tags": [
-      "Invoices",
-      "Quotes",
-      "Clients",
-      "Tradies"
+      "Journaling",
+      "Check-ins",
+      "Routines",
+      "AI support"
     ],
-    "shortDescription": "A practical app for sole traders and small operators who need quotes, invoices, jobs and client records in one place.",
-    "longDescription": "IN & OUT started as a personal tool to make quote and invoice work less painful. It is designed for trade and maintenance work where you need to keep track of clients, job notes, materials, quotes, invoices and business records without living inside a complicated accounting package. The demo shows the general workflow. Full access is intended to add persistent user data, account-based storage and subscription access.",
+    "shortDescription": "A private-feeling digital space for journaling, self-reflection and daily support tools.",
+    "longDescription": "Sanctuary is designed as a safe, quiet digital place for daily check-ins, journaling prompts, reflection tools and supportive AI-assisted conversation. It is not a replacement for a doctor, counsellor or crisis service, but it can help people organise thoughts, track patterns and build routines between real-world supports. The demo lets people experience the general feel before deciding whether full access is useful for them.",
     "screenshots": [
-      "assets/screenshots/inout/screen-1.png",
-      "assets/screenshots/inout/screen-2.png",
-      "assets/screenshots/inout/screen-3.png",
-      "assets/screenshots/inout/screen-4.png",
-      "assets/screenshots/inout/screen-5.png"
-    ]
-  },
-  {
+      "assets/screenshots/sanctuary/screen-1.png",
+      "assets/screenshots/sanctuary/screen-2.png",
+      "assets/screenshots/sanctuary/screen-3.png",
+      "assets/screenshots/sanctuary/screen-4.png",
+      "assets/screenshots/sanctuary/screen-5.png",
+      "assets/screenshots/sanctuary/screen-6.png"
+  ]
+},
+   {
     "id": "after-dark",
     "name": "After Dark Tales",
     "subtitle": "Personalised generated stories for adult readers.",
@@ -102,6 +129,30 @@ window.CJS_APPS = [
       "assets/screenshots/after-dark/screen-1.png",
       "assets/screenshots/after-dark/screen-2.png",
       "assets/screenshots/after-dark/screen-3.png"
+    ]
+  },
+  {
+    "id": "never-ending-story",
+    "name": "Never Ending Story",
+    "subtitle": "Self-generated stories based on your ideas or a completely new prompt.",
+    "category": "Creative writing",
+    "status": "Demo ready",
+    "monthlyPrice": "$7.99/month",
+    "demoUrl": "https://neverendingstory.cjsapplabs.xyz",
+    "checkoutUrl": "https://neverendingstory.cjsapplabs.xyz",
+    "iconText": "NS",
+    "tags": [
+      "Stories",
+      "Creative writing",
+      "AI writing",
+      "Reading"
+    ],
+    "shortDescription": "A story app that creates original stories from user ideas and reading preferences.",
+    "longDescription": "Never Ending Story creates new stories from a user idea, theme, setting or prompt. It is designed for readers who want fresh stories and for families or creative users who like shaping what happens next. The demo gives people a feel for the story generation flow before full access is offered.",
+    "screenshots": [
+      "assets/screenshots/never-ending-story/screen-1.png",
+      "assets/screenshots/never-ending-story/screen-2.png",
+      "assets/screenshots/never-ending-story/screen-3.png"
     ]
   },
   {
@@ -133,9 +184,9 @@ window.CJS_APPS = [
     "name": "Cursive Helper",
     "subtitle": "Cursive writing practice and tracing support.",
     "category": "Kids learning",
-    "status": "Add demo URL",
+    "status": "Demo ready",
     "monthlyPrice": "$4.99/month",
-    "demoUrl": "",
+    "demoUrl": "https://cursivedemo.cjsapplabs.xyz/",
     "checkoutUrl": "",
     "iconText": "CU",
     "tags": [
@@ -252,9 +303,9 @@ window.CJS_APPS = [
     "name": "Learning Stars",
     "subtitle": "Bright interactive learning for kids.",
     "category": "Kids learning",
-    "status": "Add demo URL",
+    "status": "Demo ready",
     "monthlyPrice": "$4.99/month",
-    "demoUrl": "",
+    "demoUrl": "https://learningstars.cjsapplabs.xyz/",
     "checkoutUrl": "",
     "iconText": "LS",
     "tags": [
@@ -322,9 +373,9 @@ window.CJS_APPS = [
     "name": "MoneyTalks",
     "subtitle": "A simple personal money and budget helper.",
     "category": "Finance",
-    "status": "Add demo URL",
+    "status": "Demo ready",
     "monthlyPrice": "$5.99/month",
-    "demoUrl": "",
+    "demoUrl": "https://moneymate.cjsapplabs.xyz/",
     "checkoutUrl": "",
     "iconText": "MT",
     "tags": [
@@ -338,57 +389,6 @@ window.CJS_APPS = [
     "screenshots": [
       "assets/screenshots/moneytalks-1.svg",
       "assets/screenshots/moneytalks-2.svg"
-    ]
-  },
-  {
-    "id": "never-ending-story",
-    "name": "Never Ending Story",
-    "subtitle": "Self-generated stories based on your ideas or a completely new prompt.",
-    "category": "Creative writing",
-    "status": "Demo ready",
-    "monthlyPrice": "$7.99/month",
-    "demoUrl": "https://nes-demo.cjsapplabs.xyz/",
-    "checkoutUrl": "",
-    "iconText": "NS",
-    "tags": [
-      "Stories",
-      "Creative writing",
-      "AI writing",
-      "Reading"
-    ],
-    "shortDescription": "A story app that creates original stories from user ideas and reading preferences.",
-    "longDescription": "Never Ending Story creates new stories from a user idea, theme, setting or prompt. It is designed for readers who want fresh stories and for families or creative users who like shaping what happens next. The demo gives people a feel for the story generation flow before full access is offered.",
-    "screenshots": [
-      "assets/screenshots/never-ending-story/screen-1.png",
-      "assets/screenshots/never-ending-story/screen-2.png",
-      "assets/screenshots/never-ending-story/screen-3.png"
-    ]
-  },
-  {
-    "id": "sanctuary",
-    "name": "Sanctuary",
-    "subtitle": "A calm AI support space for reflection and check-ins.",
-    "category": "Wellbeing",
-    "status": "Demo ready",
-    "monthlyPrice": "$7.99/month",
-    "demoUrl": "https://sanctuary.cjsapplabs.xyz/",
-    "checkoutUrl": "",
-    "iconText": "SA",
-    "tags": [
-      "Journaling",
-      "Check-ins",
-      "Routines",
-      "AI support"
-    ],
-    "shortDescription": "A private-feeling digital space for journaling, self-reflection and daily support tools.",
-    "longDescription": "Sanctuary is designed as a safe, quiet digital place for daily check-ins, journaling prompts, reflection tools and supportive AI-assisted conversation. It is not a replacement for a doctor, counsellor or crisis service, but it can help people organise thoughts, track patterns and build routines between real-world supports. The demo lets people experience the general feel before deciding whether full access is useful for them.",
-    "screenshots": [
-      "assets/screenshots/sanctuary/screen-1.png",
-      "assets/screenshots/sanctuary/screen-2.png",
-      "assets/screenshots/sanctuary/screen-3.png",
-      "assets/screenshots/sanctuary/screen-4.png",
-      "assets/screenshots/sanctuary/screen-5.png",
-      "assets/screenshots/sanctuary/screen-6.png"
     ]
   }
 ];

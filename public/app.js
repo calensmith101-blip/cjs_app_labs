@@ -42,7 +42,7 @@ function renderHome() {
       <div class="hero-copy">
         <p class="eyebrow">Independent apps by CJ</p>
         <h1>Try useful, personal-built apps before you subscribe.</h1>
-        <p class="lead">I started building these apps for my own work, family, learning and creative projects. Some became useful enough that I wanted to share them. CJS App Labs is where you can try the demos for free and decide what suits you.</p>
+        <p class="lead">I am just a tradie / single dad who made these apps for my own personal / family / business convenience, education and to loose some of the stress. I was always on the go with a part time / seasonal job + my own personal business - then studied on the side with 2 kids half the time. I was stressed and needed help. So i created apps that help. There's bookkeeping apps that will also track invoices/quotes/finances including tax and has an ai quoting system built in that is so simple,  safe educational / homework / entertainment games for the kids, family scheduleing reward system app for chores, and what really helped was a communication page - for when its easier to type, electrical / electronics building and troubleshooting, personal guidance and relaxation / mental & physical health app, personal budgeting and finances app and my personal favourite -"The never-ever ending stories". Take a look around and give the demos a try and show some support. Garunteed there will something here that can help you.</p>
         <div class="hero-actions">
           <a class="primary-button" href="#/apps">Browse free demos</a>
           <a class="secondary-button" href="#/download-help">How full access works</a>
@@ -80,7 +80,7 @@ function renderApps() {
     <section class="section page-hero compact">
       <p class="eyebrow">App demos</p>
       <h1>All CJS App Labs demos</h1>
-      <p class="lead">Open any available demo for free. Apps marked “Add demo URL” are already listed in the catalogue and only need their final link added in <code>apps.config.js</code>.</p>
+      <p class="lead">Come test my apps before you pay for it and see how convenient they really are and how much they can benifit you in your business, family and personal lives. These are made with security, safetty and personal data protection as a priority. </p>
     </section>
 
     <section class="section app-browser">
@@ -195,7 +195,7 @@ function renderDownloadHelp() {
     <section class="section page-hero compact">
       <p class="eyebrow">How to download</p>
       <h1>Use apps in the browser or install them from Chrome.</h1>
-      <p class="lead">Most CJS apps are web apps. That means you can open them from the website, and many can be installed to your phone or computer from Google Chrome without going through an app store.</p>
+      <p class="lead"> After you subscribe, the demo version will unlock. In Google chrome you will be able to install the app . .</p>
     </section>
     <section class="section timeline">
       ${step("1", "Try the demo", "Open the free demo from the Apps page. No payment is needed to test the public demo version.")}
@@ -215,7 +215,7 @@ function renderSecurity() {
     <section class="section page-hero compact">
       <p class="eyebrow">Security & privacy</p>
       <h1>Clear access rules. User data separated by account.</h1>
-      <p class="lead">CJS App Labs is being set up so demos stay public, while full versions use account-based access and subscription checks.</p>
+      <p class="lead">All CJS App Labs apps are built with the same security-minded approach I use for my own personal tools. Each app is designed with user privacy, safe access, and reliable data handling in mind, with ongoing improvements as the apps continue to grow.</p>
     </section>
     <section class="section detail-layout">
       <article class="content-panel">
@@ -247,7 +247,7 @@ function renderAbout() {
       <h2>Why CJS App Labs exists</h2>
       <p>CJS App Labs is the public home for those projects. It is where people can try demo versions before paying for anything. The goal is to keep the apps practical, honest and easy to test first.</p>
       <p>Some apps are for business and trade work. Some are for families and kids. Some are creative, wellbeing or game projects. They are not all trying to be giant corporate software products. They are built around real problems, real routines and ideas that kept becoming useful.</p>
-      <p>As the full versions are released, subscription access will be added so people can use the apps properly with their own saved data and account-based access.</p>
+      <p>As the full versions are released, subscription access will be added so people can use the apps properly with their own saved data and account-based access. </p>
     </section>
   `);
 }
