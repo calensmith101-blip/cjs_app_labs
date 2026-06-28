@@ -327,9 +327,9 @@ window.CJS_APPS = [
     "subtitle": "Maths practice built like an adventure.",
     "category": "Kids learning",
     "status": "Demo ready",
-    "monthlyPrice": "$4.99/month",
+    "monthlyPrice": "$2.99/month",
     "demoUrl": "https://mathquest.cjsapplabs.xyz/",
-    "checkoutUrl": "",
+    "checkoutUrl": "https://mathquest.cjsapplabs.xyz/",
     "iconText": "MQ",
     "tags": [
       "Maths",
