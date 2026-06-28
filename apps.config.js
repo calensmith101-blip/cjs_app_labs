@@ -60,7 +60,7 @@ window.CJS_APPS = [
   "subtitle": "Invoicing, quoting, jobs and small business admin.",
   "category": "Business",
   "status": "Demo ready",
-  "monthlyPrice": "$14.99/month",
+  "monthlyPrice": "$10.99/month",
   "demoUrl": "https://accountant.cjsapplabs.xyz",
   "checkoutUrl": "https://buy.stripe.com/fZu6oG7an422gle5rednW02",
   "iconText": "TA",
