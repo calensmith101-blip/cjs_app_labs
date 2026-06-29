@@ -305,7 +305,7 @@ window.CJS_APPS = [
     "category": "Kids learning",
     "status": "Demo ready",
     "monthlyPrice": "$4.99/month",
-    "demoUrl": "https://learningstars.cjsapplabs.xyz/",
+    "demoUrl": "https://buy.stripe.com/cNi4gy0LZ566b0Ug5SdnW05/",
     "checkoutUrl": "",
     "iconText": "LS",
     "tags": [
