@@ -233,7 +233,7 @@ window.CJS_APPS = [
     "status": "Demo ready",
     "monthlyPrice": "$5.99/month",
     "demoUrl": "https://familyapp.cjsapplabs.xyz/",
-    "checkoutUrl": "",
+    "checkoutUrl": "https://familyapp.cjsapplabs.xyz/",
     "iconText": "FP",
     "tags": [
       "Routines",
