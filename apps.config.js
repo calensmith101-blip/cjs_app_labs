@@ -329,7 +329,7 @@ window.CJS_APPS = [
     "status": "Demo ready",
     "monthlyPrice": "$2.99/month",
     "demoUrl": "https://mathquest.cjsapplabs.xyz/",
-    "checkoutUrl": "https://mathquest.cjsapplabs.xyz/",
+    "checkoutUrl": "https://your-mathquest-url.com/api/stripe-webhook",
     "iconText": "MQ",
     "tags": [
       "Maths",
