@@ -88,7 +88,7 @@ window.CJS_APPS = [
     "status": "Demo ready",
     "monthlyPrice": "$7.99/month",
     "demoUrl": "https://sanctuary.cjsapplabs.xyz/",
-    "checkoutUrl": "",
+    "checkoutUrl": "https://buy.stripe.com/bJefZg1Q36aa3ys06UdnW07",
     "iconText": "SA",
     "tags": [
       "Journaling",
