@@ -210,7 +210,7 @@ window.CJS_APPS = [
     "status": "Demo ready",
     "monthlyPrice": "$9.99/month",
     "demoUrl": "https://electrolab.cjsapplabs.xyz/",
-    "checkoutUrl": "",
+    "checkoutUrl": "https://buy.stripe.com/9B63cu3Ybcyy9WQ3j6dnW0c",
     "iconText": "EL",
     "tags": [
       "Electrical",
