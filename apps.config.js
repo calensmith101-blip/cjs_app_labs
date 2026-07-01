@@ -322,14 +322,14 @@ window.CJS_APPS = [
     ]
   },
   {
-    "id": "mathquest",
-    "name": "Math Quest",
+    "id": "mathsquest",
+    "name": "Maths Quest",
     "subtitle": "Maths practice built like an adventure.",
     "category": "Kids learning",
     "status": "Demo ready",
     "monthlyPrice": "$2.99/month",
     "demoUrl": "https://mathquest.cjsapplabs.xyz/",
-    "checkoutUrl": "https://buy.stripe.com/14A14mfGT6aa6KE06UdnW06",
+    "checkoutUrl": "https://buy.stripe.com/fZu4gybqD7ee4Cw7zmdnW0i",
     "iconText": "MQ",
     "tags": [
       "Maths",
