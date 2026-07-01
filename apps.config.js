@@ -163,7 +163,7 @@ window.CJS_APPS = [
     "status": "Demo ready",
     "monthlyPrice": "$5.99/month",
     "demoUrl": "https://coaching.cjsapplabs.xyz/",
-    "checkoutUrl": "",
+    "checkoutUrl": "https://buy.stripe.com/00wcN452f2XY5GA2f2dnW0f",
     "iconText": "CC",
     "tags": [
       "Basketball",
@@ -187,7 +187,7 @@ window.CJS_APPS = [
     "status": "Demo ready",
     "monthlyPrice": "$4.99/month",
     "demoUrl": "https://cursivedemo.cjsapplabs.xyz/",
-    "checkoutUrl": "",
+    "checkoutUrl": "https://buy.stripe.com/aFa6oG1Q3fKKd927zmdnW0g",
     "iconText": "CU",
     "tags": [
       "Writing",
@@ -233,7 +233,7 @@ window.CJS_APPS = [
     "status": "Demo ready",
     "monthlyPrice": "$5.99/month",
     "demoUrl": "https://familyapp.cjsapplabs.xyz/",
-    "checkoutUrl": "https://familyapp.cjsapplabs.xyz/",
+    "checkoutUrl": "https://buy.stripe.com/dRm28qfGT8ii6KE9HudnW0h",
     "iconText": "FP",
     "tags": [
       "Routines",
@@ -306,7 +306,7 @@ window.CJS_APPS = [
     "status": "Demo ready",
     "monthlyPrice": "$4.99/month",
     "demoUrl": "https://learningstars.cjsapplabs.xyz",
-    "checkoutUrl": "https://buy.stripe.com/cNi4gy0LZ566b0Ug5SdnW05",
+    "checkoutUrl": "https://buy.stripe.com/bJe5kC0LZ1TU7OI1aYdnW0d",
     "iconText": "LS",
     "tags": [
       "Kids",
@@ -352,7 +352,7 @@ window.CJS_APPS = [
     "status": "Demo ready",
     "monthlyPrice": "$4.99/month",
     "demoUrl": "https://mixmate.cjsapplabs.xyz/",
-    "checkoutUrl": "",
+    "checkoutUrl": "https://buy.stripe.com/fZu4gy9ivbuuc4Y9HudnW0e",
     "iconText": "MM",
     "tags": [
       "Cocktails",
