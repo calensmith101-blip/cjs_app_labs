@@ -115,7 +115,7 @@ window.CJS_APPS = [
     "status": "Demo ready",
     "monthlyPrice": "$7.99/month",
     "demoUrl": "https://ad-demo.cjsapplabs.xyz/",
-    "checkoutUrl": "",
+    "checkoutUrl": "https://buy.stripe.com/dRm28qeCPaqq1qkcTGdnW0a",
     "iconText": "AD",
     "tags": [
       "Stories",
@@ -139,7 +139,7 @@ window.CJS_APPS = [
     "status": "Demo ready",
     "monthlyPrice": "$7.99/month",
     "demoUrl": "https://neverendingstory.cjsapplabs.xyz",
-    "checkoutUrl": "https://neverendingstory.cjsapplabs.xyz",
+    "checkoutUrl": "https://buy.stripe.com/14AaEW3Yb0PQed66vidnW0b",
     "iconText": "NS",
     "tags": [
       "Stories",
@@ -257,7 +257,7 @@ window.CJS_APPS = [
     "status": "Demo ready",
     "monthlyPrice": "$4.99/month",
     "demoUrl": "https://gamertabs.cjsapplabs.xyz/",
-    "checkoutUrl": "",
+    "checkoutUrl": "https://buy.stripe.com/00w14m9iv0PQ1qk2f2dnW08",
     "iconText": "GT",
     "tags": [
       "Board games",
@@ -281,7 +281,7 @@ window.CJS_APPS = [
     "status": "Demo ready",
     "monthlyPrice": "$4.99/month",
     "demoUrl": "https://grimoire.cjsapplabs.xyz/",
-    "checkoutUrl": "",
+    "checkoutUrl": "https://buy.stripe.com/28E5kC8er1TU0mgcTGdnW09",
     "iconText": "GO",
     "tags": [
       "Reference",
