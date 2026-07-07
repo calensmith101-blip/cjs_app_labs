@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CJS App Labs — Under Review</title>
+  <meta name="description" content="CJS App Labs is temporarily on hold while the apps are reviewed and finished properly." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #070812;
+      --card: rgba(255,255,255,.08);
+      --text: #f7f7fb;
+      --muted: #b7bdd6;
+      --line: rgba(255,255,255,.18);
+      --accent: #8b5cf6;
+      --accent2: #22d3ee;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(139,92,246,.38), transparent 30rem),
+        radial-gradient(circle at 80% 15%, rgba(34,211,238,.28), transparent 26rem),
+        linear-gradient(135deg, #070812, #111426 55%, #080912);
+      color: var(--text);
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+    main {
+      width: min(760px, 100%);
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,.11), rgba(255,255,255,.06));
+      border-radius: 28px;
+      padding: clamp(28px, 6vw, 56px);
+      box-shadow: 0 30px 90px rgba(0,0,0,.42);
+      backdrop-filter: blur(14px);
+      text-align: center;
+    }
+    .logo {
+      width: 72px;
+      height: 72px;
+      border-radius: 22px;
+      margin: 0 auto 22px;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      letter-spacing: -.06em;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: white;
+      box-shadow: 0 20px 45px rgba(34,211,238,.18);
+    }
+    .status {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 8px 13px;
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 18px;
+      background: rgba(0,0,0,.16);
+    }
+    .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
+      background: #facc15;
+      box-shadow: 0 0 16px rgba(250,204,21,.8);
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(36px, 8vw, 68px);
+      line-height: .95;
+      letter-spacing: -.06em;
+    }
+    p {
+      margin: 20px auto 0;
+      color: var(--muted);
+      font-size: clamp(16px, 2vw, 19px);
+      line-height: 1.65;
+      max-width: 610px;
+    }
+    .panel {
+      margin-top: 30px;
+      padding: 18px;
+      border-radius: 20px;
+      border: 1px solid var(--line);
+      background: rgba(0,0,0,.18);
+      color: #dfe4ff;
+      text-align: left;
+    }
+    .panel strong { color: white; }
+    a { color: #a5f3fc; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="logo">CJ</div>
+    <div class="status"><span class="dot"></span> Site temporarily on hold</div>
+    <h1>CJS App Labs is under review.</h1>
+    <p>
+      The public app showcase is paused while each app is checked, finished properly, and prepared for safe public release.
+      Existing work has not been removed — the site is simply locked behind this holding page for now.
+    </p>
+    <div class="panel">
+      <strong>Need help or access?</strong><br />
+      Contact <a href="mailto:admin@cjsapplabs.xyz">admin@cjsapplabs.xyz</a> while the app demos are being reviewed.
+    </div>
+  </main>
+</body>
+</html>

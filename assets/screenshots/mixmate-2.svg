@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800" role="img" aria-label="MixMate screenshot placeholder">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8fbff"/>
+      <stop offset="1" stop-color="#dfeaff"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#eef4ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="800" fill="url(#bg)"/>
+  <rect x="70" y="70" width="1140" height="660" rx="44" fill="white" stroke="#d5deef" stroke-width="3"/>
+  <rect x="110" y="120" width="1060" height="88" rx="26" fill="#172033"/>
+  <circle cx="160" cy="164" r="25" fill="#2357e5"/>
+  <rect x="205" y="145" width="250" height="18" rx="9" fill="#f7f8fb" opacity=".95"/>
+  <rect x="205" y="174" width="160" height="12" rx="6" fill="#aab8d6"/>
+  <rect x="110" y="250" width="330" height="410" rx="32" fill="url(#card)" stroke="#dbe2ef" stroke-width="3"/>
+  <rect x="480" y="250" width="690" height="180" rx="32" fill="url(#card)" stroke="#dbe2ef" stroke-width="3"/>
+  <rect x="480" y="470" width="325" height="190" rx="32" fill="url(#card)" stroke="#dbe2ef" stroke-width="3"/>
+  <rect x="845" y="470" width="325" height="190" rx="32" fill="url(#card)" stroke="#dbe2ef" stroke-width="3"/>
+  <text x="145" y="332" font-family="Inter, Arial, sans-serif" font-size="46" font-weight="800" fill="#172033">MixMate</text>
+  <text x="145" y="382" font-family="Inter, Arial, sans-serif" font-size="25" fill="#68748a">Recipes • inventory • shopping</text>
+  <text x="145" y="585" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#2357e5">Feature preview</text>
+  <rect x="520" y="300" width="420" height="24" rx="12" fill="#172033" opacity=".92"/>
+  <rect x="520" y="350" width="570" height="18" rx="9" fill="#68748a" opacity=".5"/>
+  <rect x="520" y="385" width="500" height="18" rx="9" fill="#68748a" opacity=".35"/>
+  <circle cx="555" cy="548" r="32" fill="#2357e5" opacity=".9"/>
+  <rect x="610" y="530" width="150" height="16" rx="8" fill="#172033" opacity=".85"/>
+  <rect x="610" y="562" width="110" height="13" rx="7" fill="#68748a" opacity=".45"/>
+  <circle cx="920" cy="548" r="32" fill="#0f8f68" opacity=".9"/>
+  <rect x="975" y="530" width="140" height="16" rx="8" fill="#172033" opacity=".85"/>
+  <rect x="975" y="562" width="120" height="13" rx="7" fill="#68748a" opacity=".45"/>
+  <text x="1010" y="705" font-family="Inter, Arial, sans-serif" font-size="18" fill="#68748a">Replace with real screenshot</text>
+</svg>
