@@ -392,3 +392,104 @@ window.CJS_APPS = [
     ]
   }
 ];
+
+window.CJS_DOWNLOAD_GUIDES = {
+  "the-accountant": [
+    "Open the trial and run through quote, invoice, and client workflow screens.",
+    "If you want full AI quoting and account-linked usage, select paid access.",
+    "Return to the app using your subscribed account to unlock full mode.",
+    "In Chrome, use Install app so The Accountant can run like a desktop/mobile app shortcut.",
+    "Keep using the same account so your business records stay in one place."
+  ],
+  "sanctuary": [
+    "Start with the trial and test journaling, check-ins, and support flow.",
+    "Choose paid access if you want ongoing private routine use.",
+    "Sign back in with the same account after purchase.",
+    "Use Chrome Install app or Add to Home screen for quicker daily access.",
+    "If install is not shown, use the browser version and contact support for device help."
+  ],
+  "after-dark": [
+    "Open trial mode and generate a few sample stories.",
+    "Use paid access when you want full story features and future save history.",
+    "Reopen with your paid account details.",
+    "Install through Chrome for a cleaner app-like reading experience.",
+    "Use the same profile each time so your generated content stays linked."
+  ],
+  "never-ending-story": [
+    "Use the trial to test prompts, themes, and story flow.",
+    "Move to paid access for full usage when available.",
+    "Re-enter the app from Chrome with your subscribed account.",
+    "Install from the Chrome menu for home-screen/desktop launch.",
+    "Keep one login for consistent story history."
+  ],
+  "coach-court": [
+    "Open the trial and test drills, rotations, and coaching notes.",
+    "Use paid access if you want full team workflow support.",
+    "Log back in with the same details used for purchase.",
+    "Install through Chrome for faster sideline access on game day.",
+    "Contact support if your device blocks install options."
+  ],
+  "cursive": [
+    "Open trial mode and test tracing and letter practice screens.",
+    "Choose paid access for full practice flow when ready.",
+    "Open again with the subscribed account.",
+    "Install from Chrome to let kids launch it quickly from home screen.",
+    "Use one account profile per family setup for best continuity."
+  ],
+  electrolab: [
+    "Run the trial and test calculators and reference tools you use most.",
+    "Upgrade through paid access when you want full practical workflow access.",
+    "Sign in again with your paid account.",
+    "Install through Chrome so Electrolab opens like a field tool app.",
+    "Use the same account to keep your usage consistent across devices."
+  ],
+  "family-planner": [
+    "Try the trial for routines, chores, and reward flow.",
+    "Use paid access when your family wants full account-based use.",
+    "Return with the same account credentials after checkout.",
+    "Install from Chrome on parent and child devices where supported.",
+    "Keep one primary account owner for simpler management."
+  ],
+  gamertabs: [
+    "Open trial mode and test available game options.",
+    "Use paid access if you want full gaming features when released.",
+    "Reopen the app using your subscribed account.",
+    "Install from Chrome for quick one-tap launch.",
+    "If an install prompt is missing, keep using browser mode and contact support."
+  ],
+  grimoire: [
+    "Start with the trial and browse topic structure and reference style.",
+    "Choose paid access for full reference experience where available.",
+    "Log back in with your purchase account.",
+    "Install through Chrome for a dedicated reading interface.",
+    "Use a consistent account so your usage and preferences stay aligned."
+  ],
+  "learning-stars": [
+    "Open the trial and test kid-friendly activities and progress flow.",
+    "Upgrade with paid access for full usage when ready.",
+    "Sign in again using the same account.",
+    "Install from Chrome for easier daily learning sessions.",
+    "Use supervised account access on child devices."
+  ],
+  mathsquest: [
+    "Try the trial to test question flow and difficulty feel.",
+    "Use paid access for full adventure maths content when available.",
+    "Reopen with your subscribed account details.",
+    "Install using Chrome menu to create an app shortcut.",
+    "Keep one learner profile for better progress continuity."
+  ],
+  mixmate: [
+    "Open trial mode and browse recipes and ingredient tools.",
+    "Choose paid access when you want full inventory and usage features.",
+    "Re-enter with the same account after payment.",
+    "Install from Chrome for kitchen-friendly quick access.",
+    "Use the same login on all devices to keep list data aligned."
+  ],
+  moneytalks: [
+    "Run the trial and test bills, planning, and budget flow.",
+    "Move to paid access for full personal finance usage.",
+    "Log back in using your subscribed account details.",
+    "Install via Chrome so MoneyTalks opens directly from home screen/desktop.",
+    "If you hit account issues, contact support with your app name."
+  ]
+};

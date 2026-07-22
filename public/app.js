@@ -2,8 +2,28 @@ const root = document.querySelector("#appRoot");
 const nav = document.querySelector("#siteNav");
 const menuButton = document.querySelector("#menuButton");
 const APPS = Array.isArray(window.CJS_APPS) ? window.CJS_APPS : [];
-const PLANS = Array.isArray(window.CJS_PLANS) ? window.CJS_PLANS : [];
-const CONTACT = window.CJS_CONTACT || { general: "info@cjsapplabs.xyz", business: "admin@cjsapplabs.xyz", owner: "cj@cjsapplabs.xyz" };
+const CONTACT = window.CJS_CONTACT || {
+  general: "info@cjsapplabs.xyz",
+  business: "admin@cjsapplabs.xyz",
+  owner: "cj@cjsapplabs.xyz"
+};
+const DOWNLOAD_GUIDES = window.CJS_DOWNLOAD_GUIDES || {};
+const APP_ACCENTS = {
+  "the-accountant": ["#144563", "#0f2d3f", "#a36f33"],
+  sanctuary: ["#3c6f66", "#295248", "#87a08f"],
+  "after-dark": ["#3a1f4f", "#1f102d", "#aa7e4b"],
+  "never-ending-story": ["#344b7b", "#1f2d4d", "#c88c43"],
+  "coach-court": ["#7a3b1d", "#4f2410", "#cf9556"],
+  cursive: ["#6e4f2b", "#46301a", "#c59e68"],
+  electrolab: ["#1e5b7c", "#12374b", "#8fb4c8"],
+  "family-planner": ["#55744a", "#34492f", "#c4a06f"],
+  gamertabs: ["#2d475d", "#1a2c3b", "#8f6bb7"],
+  grimoire: ["#372038", "#1c111d", "#9c7a58"],
+  "learning-stars": ["#4e5f26", "#313b18", "#d0a35a"],
+  mathsquest: ["#1c5968", "#113944", "#9b7f47"],
+  mixmate: ["#69442b", "#3d2719", "#ca8f59"],
+  moneytalks: ["#2e5950", "#1b3731", "#a8a36a"]
+};
 
 function route() {
   const hashPath = (window.location.hash || "").replace(/^#/, "");
@@ -12,12 +32,10 @@ function route() {
   setActiveNav(path);
 
   if (path === "/" || path === "/home") return renderHome();
+  if (path === "/about") return renderAbout();
   if (path === "/apps") return renderApps();
   if (path.startsWith("/apps/")) return renderAppDetail(path.split("/").pop());
-  if (path === "/pricing") return renderPricing();
-  if (path === "/download-help") return renderDownloadHelp();
-  if (path === "/security" || path === "/privacy") return renderSecurity();
-  if (path === "/about") return renderAbout();
+  if (path === "/how-to-download") return renderDownloadHelp();
   return renderNotFound();
 }
 
@@ -30,43 +48,51 @@ function setActiveNav(path) {
 
 function page(html) {
   root.innerHTML = html;
-  root.focus({ preventScroll: true });
   nav?.classList.remove("open");
+  menuButton?.setAttribute("aria-expanded", "false");
+  root.focus({ preventScroll: true });
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 function renderHome() {
   const featured = APPS.slice(0, 6).map(appCard).join("");
+  const categories = [...new Set(APPS.map((app) => app.category))].slice(0, 7);
+
   page(`
-    <section class="hero section">
+    <section class="section hero">
       <div class="hero-copy">
-        <p class="eyebrow">Independent apps by CJ</p>
-        <h1>Try useful, personal-built apps before you subscribe.</h1>
-        <p class="lead">I am just a tradie / single dad who made these apps for my own personal / family / business convenience, education and to loose some of the stress. I was always on the go with a part time / seasonal job + my own personal business - then studied on the side with 2 kids half the time. I was stressed and needed help. So i created apps that help. There's bookkeeping apps that will also track invoices/quotes/finances including tax and has an ai quoting system built in that is so simple,  safe educational / homework / entertainment games for the kids, family scheduleing reward system app for chores, and what really helped was a communication page - for when its easier to type, electrical / electronics building and troubleshooting, personal guidance and relaxation / mental & physical health app, personal budgeting and finances app and my personal favourite -"The never-ever ending stories". Take a look around and give the demos a try and show some support. Garunteed there will something here that can help you.</p>
+        <p class="eyebrow">Independent Full Apps + Public Demos</p>
+        <h1>Built at home. Built for real life. Built to help.</h1>
+        <p class="lead">This is not a generic app store. These are projects I built because my life was overloaded and I needed better systems for family, work, learning, routine, mindset, and everyday survival. You can try every public demo first. If you like it, pay, download, and use.</p>
         <div class="hero-actions">
-          <a class="primary-button" href="#/apps">Browse free demos</a>
-          <a class="secondary-button" href="#/download-help">How full access works</a>
+          <a class="primary-button" href="#/apps">Explore all apps</a>
+          <a class="secondary-button" href="#/about">Read why I built them</a>
         </div>
       </div>
-      <div class="hero-panel" aria-label="CJS App Labs highlights">
-        <div class="stat"><strong>${APPS.length}</strong><span>apps listed</span></div>
-        <div class="stat"><strong>Free</strong><span>demo access first</span></div>
-        <div class="stat"><strong>No lock-in</strong><span>monthly access</span></div>
-      </div>
+      <aside class="hero-panel" aria-label="Showcase highlights">
+        <div class="stat"><strong>${APPS.length}</strong><span>public demos listed</span></div>
+        <div class="stat"><strong>Family + Trade</strong><span>from kids learning to real admin tools</span></div>
+        <div class="stat"><strong>Trial first</strong><span>try before any paid access</span></div>
+      </aside>
     </section>
 
-    <section class="section split-panel">
+    <section class="section surface">
       <div>
-        <p class="eyebrow">Simple setup</p>
-        <h2>Demo here. Subscribe when ready. Use through the website or install from Chrome.</h2>
+        <p class="eyebrow">What is here</p>
+        <h2>Apps for kids, adults, tradies, creators, and curious minds.</h2>
       </div>
-      <p>Each demo is available to test first. When full access is released for an app, subscriptions unlock the full version for your account. Access is month-to-month. If a payment is not renewed, full access pauses after the paid period while your saved data remains attached to your account.</p>
+      <div>
+        <p>Inside this collection are apps for reading and writing practice, maths, coaching, electronics support, family structure, invoicing, wellbeing, storytelling, games, and deep reference topics. Some projects are practical. Some are experimental. All were made to solve real-world pressure points, not to chase trends.</p>
+        <div class="tag-row">${categories.map((category) => `<span>${escapeHtml(category)}</span>`).join("")}</div>
+      </div>
     </section>
 
     <section class="section">
       <div class="section-heading">
-        <p class="eyebrow">Featured demos</p>
-        <h2>Start with the apps that are already live.</h2>
+        <div>
+          <p class="eyebrow">Featured right now</p>
+          <h2>Start with these demo-ready apps.</h2>
+        </div>
         <a href="#/apps">View all apps</a>
       </div>
       <div class="card-grid">${featured}</div>
@@ -74,18 +100,42 @@ function renderHome() {
   `);
 }
 
-function renderApps() {
-  const categories = ["All", ...new Set(APPS.map((app) => app.category))];
+function renderAbout() {
   page(`
     <section class="section page-hero compact">
-      <p class="eyebrow">App demos</p>
-      <h1>All CJS App Labs demos</h1>
-      <p class="lead">Come test my apps before you pay for it and see how convenient they really are and how much they can benifit you in your business, family and personal lives. These are made with security, safetty and personal data protection as a priority. </p>
+      <p class="eyebrow">About These Apps</p>
+      <h1>I started building apps for my family, then I could not stop building.</h1>
+      <p class="lead">This collection grew from real pressure: parenting, work, study, bills, routines, and trying to keep everything moving without burning out. One useful tool became two, then ten, then a full showcase.</p>
+    </section>
+
+    <section class="section content-panel wide-copy">
+      <h2>How this happened</h2>
+      <p>I am a tradie and a dad, and I needed systems that actually worked in my day-to-day life. I started with apps for family scheduling, communication, and basic structure at home. Then I kept building wherever life felt messy.</p>
+      <p>Now there are apps to help kids with reading, writing, learning, and maths. There are tools for electronics and practical trade work. There are apps for adults and tradies managing invoices, jobs, stress, and money. There are also research-driven projects based on topics I have studied for years, including demonology, end-of-world themes, mythology, and natural remedies.</p>
+      <p>These apps were built to make my life easier first. Maybe they can make yours easier too.</p>
+
+      <h2>How to use this site</h2>
+      <p>Every trial is here to be tested first. If you like it, pay, download, and use. Each app page includes screenshots, details, and install instructions.</p>
+      <p>This is not faceless software. It is a living body of work built with time, effort, and real intent to solve everyday problems.</p>
+    </section>
+  `);
+}
+
+function renderApps() {
+  const categories = ["All", ...new Set(APPS.map((app) => app.category))];
+
+  page(`
+    <section class="section page-hero compact">
+      <p class="eyebrow">All Public Trials</p>
+      <h1>Choose an app and open its full detail page.</h1>
+      <p class="lead">Each app has its own dedicated page with overview, screenshots, and direct instructions for trial access and download/install flow.</p>
     </section>
 
     <section class="section app-browser">
       <div class="filters" id="filters">
-        ${categories.map((category) => `<button class="filter ${category === "All" ? "active" : ""}" data-category="${escapeAttr(category)}">${escapeHtml(category)}</button>`).join("")}
+        ${categories
+          .map((category) => `<button class="filter ${category === "All" ? "active" : ""}" data-category="${escapeAttr(category)}">${escapeHtml(category)}</button>`)
+          .join("")}
       </div>
       <div id="appsGrid" class="card-grid">${APPS.map(appCard).join("")}</div>
     </section>
@@ -105,87 +155,73 @@ function renderApps() {
 function renderAppDetail(id) {
   const app = APPS.find((item) => item.id === id);
   if (!app) return renderNotFound();
+  const accent = getAppAccent(app.id);
+  const customSteps = Array.isArray(DOWNLOAD_GUIDES[app.id]) ? DOWNLOAD_GUIDES[app.id] : [];
+
   const demoButton = app.demoUrl
-    ? `<a class="primary-button" href="${escapeAttr(app.demoUrl)}" target="_blank" rel="noreferrer">Open free demo</a>`
-    : `<button class="primary-button disabled" disabled>Demo link pending</button>`;
-  const subscribeHref = app.checkoutUrl || `mailto:${CONTACT.general}?subject=${encodeURIComponent(`${app.name} subscription access`)}`;
+    ? `<a class="primary-button" href="${escapeAttr(app.demoUrl)}" target="_blank" rel="noreferrer">Open trial now</a>`
+    : `<button class="primary-button disabled" disabled>Trial link coming soon</button>`;
+  const buyLink = app.checkoutUrl || `mailto:${CONTACT.general}?subject=${encodeURIComponent(`${app.name} paid access request`)}`;
   const screenshotList = Array.isArray(app.screenshots) && app.screenshots.length
     ? app.screenshots
     : [`assets/screenshots/${app.id}-1.svg`];
-  const screenshots = screenshotList.map((src, index) => `
-    <figure class="screenshot-card">
-      <div class="screenshot-frame">
-        <img src="${escapeAttr(src)}" alt="${escapeAttr(app.name)} screenshot ${index + 1}" onerror="this.parentElement.classList.add('missing'); this.remove();" />
-        <span>Screenshot coming soon</span>
-      </div>
-      <figcaption>${index === 0 ? "App overview" : "Feature preview"}</figcaption>
-    </figure>
-  `).join("");
+
+  const screenshots = screenshotList
+    .map((src, index) => `
+      <figure class="screenshot-card">
+        <div class="screenshot-frame">
+          <img src="${escapeAttr(src)}" alt="${escapeAttr(app.name)} screenshot ${index + 1}" onerror="this.parentElement.classList.add('missing'); this.remove();" />
+          <span>Screenshot will be added here</span>
+        </div>
+        <figcaption>${index === 0 ? "Main app view" : `Feature preview ${index + 1}`}</figcaption>
+      </figure>
+    `)
+    .join("");
 
   page(`
-    <section class="section app-detail-hero">
+    <section class="section app-detail-hero app-theme" style="${escapeAttr(getAccentStyle(accent))}">
       <div>
-        <a class="back-link" href="#/apps">← Back to apps</a>
+        <a class="back-link" href="#/apps">← Back to all apps</a>
         <p class="eyebrow">${escapeHtml(app.category)}</p>
         <h1>${escapeHtml(app.name)}</h1>
         <p class="lead">${escapeHtml(app.subtitle)}</p>
         <div class="tag-row">${app.tags.map((tag) => `<span>${escapeHtml(tag)}</span>`).join("")}</div>
-        <div class="hero-actions">${demoButton}<a class="secondary-button" href="${escapeAttr(subscribeHref)}">Subscribe / request full access</a></div>
+        <div class="hero-actions">
+          ${demoButton}
+          <a class="secondary-button" href="${escapeAttr(buyLink)}">Paid access / subscribe</a>
+        </div>
       </div>
       <aside class="price-box">
-        <span>Full access</span>
-        <strong>${escapeHtml(app.monthlyPrice)}</strong>
-        <p>No lock-in. Access runs for the paid monthly period and pauses when payment is not renewed.</p>
+        <span>Full version price</span>
+        <strong>${escapeHtml(app.monthlyPrice || "Contact for pricing")}</strong>
+        <p>Status: ${escapeHtml(app.status || "In progress")}</p>
       </aside>
     </section>
 
     <section class="section detail-layout">
-      <article class="content-panel">
-        <h2>About ${escapeHtml(app.name)}</h2>
-        <p>${escapeHtml(app.longDescription)}</p>
-        <h3>How access works</h3>
-        <p>The demo opens free from this site. Full access will unlock through your account once a subscription is active. You can use the app through the website, and where the app supports it, install it from Google Chrome as a web app.</p>
+      <article class="content-panel app-theme" style="${escapeAttr(getAccentStyle(accent))}">
+        <h2>About this app</h2>
+        <p>${escapeHtml(app.longDescription || app.shortDescription || "Description coming soon.")}</p>
+        <h3>Download and install instructions</h3>
+        ${renderDownloadSteps(app, customSteps)}
       </article>
-      <aside class="content-panel small-panel">
-        <h3>Demo status</h3>
-        <p>${escapeHtml(app.status)}</p>
+
+      <aside class="content-panel small-panel app-theme" style="${escapeAttr(getAccentStyle(accent))}">
         <h3>Support</h3>
-        <p>Email <a href="mailto:${escapeAttr(CONTACT.general)}">${escapeHtml(CONTACT.general)}</a> for app unlocks, trial access or general questions.</p>
+        <p>Need help with ${escapeHtml(app.name)} setup? Email <a href="mailto:${escapeAttr(CONTACT.general)}">${escapeHtml(CONTACT.general)}</a>.</p>
+        <h3>Best for</h3>
+        <p>${escapeHtml(app.tags.join(", "))}</p>
       </aside>
     </section>
 
     <section class="section">
       <div class="section-heading">
-        <p class="eyebrow">Preview</p>
-        <h2>Screenshots</h2>
-        <span>Replace these files in <code>assets/screenshots</code> when you have final screenshots.</span>
+        <div>
+          <p class="eyebrow">Screenshots</p>
+          <h2>${escapeHtml(app.name)} preview gallery</h2>
+        </div>
       </div>
       <div class="screenshot-grid">${screenshots}</div>
-    </section>
-  `);
-}
-
-function renderPricing() {
-  page(`
-    <section class="section page-hero compact">
-      <p class="eyebrow">Subscriptions</p>
-      <h1>No lock-in monthly access.</h1>
-      <p class="lead">Try demos first. Subscribe only when you want the full version. Access continues for each paid 30-day period. If the next payment is not made, the app stops opening in full mode but your saved data remains connected to your account.</p>
-    </section>
-    <section class="section pricing-grid">
-      ${PLANS.map((plan) => `
-        <article class="plan-card">
-          <h2>${escapeHtml(plan.name)}</h2>
-          <strong>${escapeHtml(plan.price)}</strong>
-          <p>${escapeHtml(plan.note)}</p>
-          <ul>${plan.features.map((feature) => `<li>${escapeHtml(feature)}</li>`).join("")}</ul>
-          <a class="primary-button" href="${escapeAttr(plan.href)}">${escapeHtml(plan.cta)}</a>
-        </article>
-      `).join("")}
-    </section>
-    <section class="section content-panel">
-      <h2>What “cancel anytime” means</h2>
-      <p>There is no minimum term. When you cancel, access remains available until the end of the current paid month. After that, full app access pauses. Your saved information is not deleted just because access pauses, so the app can resume when the subscription becomes active again.</p>
     </section>
   `);
 }
@@ -193,61 +229,22 @@ function renderPricing() {
 function renderDownloadHelp() {
   page(`
     <section class="section page-hero compact">
-      <p class="eyebrow">How to download</p>
-      <h1>Use apps in the browser or install them from Chrome.</h1>
-      <p class="lead"> After you subscribe, the demo version will unlock. In Google chrome you will be able to install the app . .</p>
+      <p class="eyebrow">How To Download</p>
+      <h1>Trial first, then unlock, then install from Chrome.</h1>
+      <p class="lead">Every app page includes direct steps. This page gives the full process in one place for all apps in CJS App Labs.</p>
     </section>
+
     <section class="section timeline">
-      ${step("1", "Try the demo", "Open the free demo from the Apps page. No payment is needed to test the public demo version.")}
-      ${step("2", "Subscribe to full access", "When subscriptions are connected, choose the app or bundle you want. Your account is unlocked after purchase.")}
-      ${step("3", "Open the app again", "After purchase, return to the app using the same account. The app checks your subscription and opens the full version while your paid period is active.")}
-      ${step("4", "Install from Chrome", "On Android or desktop Chrome, open the app, tap the Chrome menu and choose Install app or Add to Home screen when available.")}
+      ${step("1", "Open any app trial", "From the All Apps page, open the trial for the app you want to test.")}
+      ${step("2", "Test if it helps", "Use the trial flow and confirm the app actually improves your day-to-day use case.")}
+      ${step("3", "Move to paid access", "When ready, use the app subscription/purchase button on that app page.")}
+      ${step("4", "Use your account", "Sign in using the same account details used for the full access flow.")}
+      ${step("5", "Install from Chrome", "Open Chrome menu and select Install app or Add to Home screen to download/install where supported.")}
     </section>
+
     <section class="section content-panel">
-      <h2>Important note</h2>
-      <p>APK downloads are only needed for apps that are specifically released that way. For most users, the safer and easier option is to use the website version or install the web app from Chrome.</p>
-    </section>
-  `);
-}
-
-function renderSecurity() {
-  page(`
-    <section class="section page-hero compact">
-      <p class="eyebrow">Security & privacy</p>
-      <h1>Clear access rules. User data separated by account.</h1>
-      <p class="lead">All CJS App Labs apps are built with the same security-minded approach I use for my own personal tools. Each app is designed with user privacy, safe access, and reliable data handling in mind, with ongoing improvements as the apps continue to grow.</p>
-    </section>
-    <section class="section detail-layout">
-      <article class="content-panel">
-        <h2>How customer access should work</h2>
-        <p>Each customer needs their own login. Each app should save data under that user’s account ID. The app should check whether that user has an active subscription before opening full features. This is the proper way to stop one customer seeing another customer’s data.</p>
-        <h2>Payments</h2>
-        <p>Payment pages should be handled by a trusted payment provider such as Stripe. CJS App Labs should not collect or store card numbers directly in the app code.</p>
-        <h2>Data after cancellation</h2>
-        <p>If a subscription stops, full access pauses after the paid period. Saved data remains attached to the user account so access can resume if the user subscribes again.</p>
-      </article>
-      <aside class="content-panel small-panel">
-        <h3>Contact</h3>
-        <p>General support and app unlocks: <a href="mailto:${escapeAttr(CONTACT.general)}">${escapeHtml(CONTACT.general)}</a></p>
-        <p>Business/admin: <a href="mailto:${escapeAttr(CONTACT.business)}">${escapeHtml(CONTACT.business)}</a></p>
-        <p>Owner: <a href="mailto:${escapeAttr(CONTACT.owner)}">${escapeHtml(CONTACT.owner)}</a></p>
-      </aside>
-    </section>
-  `);
-}
-
-function renderAbout() {
-  page(`
-    <section class="section page-hero compact">
-      <p class="eyebrow">About CJ</p>
-      <h1>Personal-built apps, shared when they become useful.</h1>
-      <p class="lead">I started making these apps for my own work, family routines, learning, budgeting, coaching and creative projects. Some of them became useful enough that I wanted to share them with other people.</p>
-    </section>
-    <section class="section content-panel wide-copy">
-      <h2>Why CJS App Labs exists</h2>
-      <p>CJS App Labs is the public home for those projects. It is where people can try demo versions before paying for anything. The goal is to keep the apps practical, honest and easy to test first.</p>
-      <p>Some apps are for business and trade work. Some are for families and kids. Some are creative, wellbeing or game projects. They are not all trying to be giant corporate software products. They are built around real problems, real routines and ideas that kept becoming useful.</p>
-      <p>As the full versions are released, subscription access will be added so people can use the apps properly with their own saved data and account-based access. </p>
+      <h2>Need direct support?</h2>
+      <p>If a trial link, payment link, or install option does not appear, contact <a href="mailto:${escapeAttr(CONTACT.general)}">${escapeHtml(CONTACT.general)}</a> and include the app name in your message.</p>
     </section>
   `);
 }
@@ -255,27 +252,28 @@ function renderAbout() {
 function renderNotFound() {
   page(`
     <section class="section page-hero compact">
-      <p class="eyebrow">Not found</p>
-      <h1>That page is not here.</h1>
-      <p class="lead">Use the app menu to get back to the demos.</p>
-      <a class="primary-button" href="#/apps">Back to apps</a>
+      <p class="eyebrow">Page not found</p>
+      <h1>This page does not exist.</h1>
+      <p class="lead">Use the menu to continue browsing the app showcase.</p>
+      <a class="primary-button" href="#/apps">Go to all apps</a>
     </section>
   `);
 }
 
 function appCard(app) {
   const demoButton = app.demoUrl
-    ? `<a href="${escapeAttr(app.demoUrl)}" class="mini-button" target="_blank" rel="noreferrer">Open demo</a>`
-    : `<span class="mini-button muted">Demo pending</span>`;
+    ? `<a href="${escapeAttr(app.demoUrl)}" class="mini-button" target="_blank" rel="noreferrer">Open trial</a>`
+    : `<span class="mini-button muted">Trial pending</span>`;
+
   return `
     <article class="app-card">
-      <div class="app-icon">${escapeHtml(app.iconText)}</div>
-      <p class="app-category">${escapeHtml(app.category)}</p>
-      <h3>${escapeHtml(app.name)}</h3>
-      <p>${escapeHtml(app.shortDescription)}</p>
-      <div class="tag-row small-tags">${app.tags.slice(0, 3).map((tag) => `<span>${escapeHtml(tag)}</span>`).join("")}</div>
+      <div class="app-icon">${escapeHtml(app.iconText || "AP")}</div>
+      <p class="app-category">${escapeHtml(app.category || "General")}</p>
+      <h3>${escapeHtml(app.name || "Unnamed app")}</h3>
+      <p>${escapeHtml(app.shortDescription || "App details coming soon.")}</p>
+      <div class="tag-row small-tags">${(app.tags || []).slice(0, 3).map((tag) => `<span>${escapeHtml(tag)}</span>`).join("")}</div>
       <div class="card-actions">
-        <a href="#/apps/${escapeAttr(app.id)}" class="text-link">Details</a>
+        <a href="#/apps/${escapeAttr(app.id)}" class="text-link">View app page</a>
         ${demoButton}
       </div>
     </article>
@@ -283,7 +281,28 @@ function appCard(app) {
 }
 
 function step(number, title, text) {
-  return `<article class="step"><span>${number}</span><div><h2>${escapeHtml(title)}</h2><p>${escapeHtml(text)}</p></div></article>`;
+  return `<article class="step"><span>${number}</span><div><h3>${escapeHtml(title)}</h3><p>${escapeHtml(text)}</p></div></article>`;
+}
+
+function renderDownloadSteps(app, customSteps) {
+  const fallback = [
+    `Open ${app.name} using the trial button on this page.`,
+    "Test the key workflow to check if the app fits your needs.",
+    "Use the paid access button to unlock full features when ready.",
+    "Sign back in with the same account used for purchase.",
+    "In Google Chrome, choose Install app or Add to Home screen when available."
+  ];
+  const steps = customSteps.length ? customSteps : fallback;
+  return `<ol class="download-steps">${steps.map((text) => `<li>${escapeHtml(text)}</li>`).join("")}</ol>`;
+}
+
+function getAppAccent(appId) {
+  return APP_ACCENTS[appId] || ["#1b425f", "#2e6288", "#8a5f2a"];
+}
+
+function getAccentStyle(colors) {
+  const [a, b, c] = colors;
+  return `--app-accent-a: ${a}; --app-accent-b: ${b}; --app-accent-c: ${c};`;
 }
 
 function escapeHtml(value) {
@@ -299,6 +318,10 @@ function escapeAttr(value) {
   return escapeHtml(value).replaceAll("`", "&#096;");
 }
 
-menuButton?.addEventListener("click", () => nav?.classList.toggle("open"));
+menuButton?.addEventListener("click", () => {
+  const isOpen = nav?.classList.toggle("open");
+  menuButton.setAttribute("aria-expanded", String(Boolean(isOpen)));
+});
+
 window.addEventListener("hashchange", route);
 route();
